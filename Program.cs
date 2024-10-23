@@ -1,13 +1,5 @@
 ﻿using ScreenSound.Menus.Menu;
 using ScreenSound.Models;
-using OpenAI_API;
-
-var client = new OpenAIAPI("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");
-var chat = client.Chat.CreateConversation();
-chat.AppendSystemMessage("Resuma a banda Ira! em um paragrafo. Use um estilo informal");
-
-string resposta = await chat.GetResponseFromChatbotAsync();
-Console.WriteLine(resposta);
 
 Dictionary<string, Banda> bandasRegistradas = new();
 Dictionary<int, Menu> opcoesMenu = new();
@@ -62,4 +54,4 @@ void ExibirOpcoesDoMenu()
         ExibirOpcoesDoMenu();
     }
 }
-// ExibirOpcoesDoMenu();
+ExibirOpcoesDoMenu();
